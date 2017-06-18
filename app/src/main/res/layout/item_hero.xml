@@ -29,7 +29,7 @@
                 android:id="@+id/ivItemHeroPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/hero_picture"
+                android:contentDescription="@string/hero_photo"
                 android:transitionName="@string/hero_picture"
                 tools:ignore="UnusedAttribute"/>
 

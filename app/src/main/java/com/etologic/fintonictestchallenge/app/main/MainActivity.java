@@ -3,11 +3,13 @@ package com.etologic.fintonictestchallenge.app.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
@@ -69,20 +71,22 @@ public final class MainActivity extends AppCompatActivity implements IMainView {
     public void setRecyclerViewAdapter(List<Hero> heroes) {
         HeroesAdapter heroesAdapter = new HeroesAdapter(heroes, new HeroesAdapter.ItemHeroeListener() {
             @Override
-            public void onItemHeroClick(String heroName) {
-                goToHeroDetail(heroName);
+            public void onItemHeroClick(String heroName, ImageView ivHeroPicture) {
+                goToHeroDetail(heroName, ivHeroPicture);
             }
         });
         recyclerView.setAdapter(heroesAdapter);
     }
 
     @Override
-    public void goToHeroDetail(String heroName) {
+    public void goToHeroDetail(String heroName, ImageView ivHeroPicture) {
         Intent intent = new Intent(this, HeroDetailActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString(HERO_NAME_KEY, heroName);
         intent.putExtras(bundle);
-        startActivity(intent);
+        ActivityOptionsCompat options = ActivityOptionsCompat.
+                makeSceneTransitionAnimation(this, ivHeroPicture, getString(R.string.hero_picture));
+        startActivity(intent, options.toBundle());
     }
 
     @Override

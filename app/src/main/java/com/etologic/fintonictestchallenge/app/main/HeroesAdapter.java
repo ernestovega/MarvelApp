@@ -27,7 +27,7 @@ import butterknife.OnClick;
 class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     interface ItemHeroeListener {
-        void onItemHeroClick(String heroeName);
+        void onItemHeroClick(String heroeName, ImageView ivHeroPicture);
     }
 
     private List<Hero> heroes;
@@ -59,7 +59,8 @@ class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         @OnClick(R.id.cvItemHeroeContainer)
         void onClick() {
             if(itemHeroeListener != null) {
-                itemHeroeListener.onItemHeroClick(tvItemHeroeName.getText().toString());
+                itemHeroeListener.onItemHeroClick(
+                        tvItemHeroeName.getText().toString(), ivItemHeroePhoto);
             }
         }
     }
