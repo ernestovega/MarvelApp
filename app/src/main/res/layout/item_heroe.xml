@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/llItemHeroeContainer"
               android:layout_width="match_parent"
               android:layout_height="@dimen/itemHeroHeight"
               android:gravity="start"
@@ -15,14 +16,13 @@
             android:id="@+id/ivItemHeroPhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/hero_picture"
-            tools:src="@mipmap/ic_launcher"/>
+            android:contentDescription="@string/hero_picture"/>
 
-        <android.support.v4.widget.ContentLoadingProgressBar
+        <ProgressBar
             android:id="@+id/pbItemHeroPhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:indeterminateTint="@color/colorPrimary"/>
+            android:padding="@dimen/half_standard_margin"/>
     </FrameLayout>
 
 

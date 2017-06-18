@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.etologic.fintonictestchallenge.R;
 import com.etologic.fintonictestchallenge.app.utils.PicassoCache;
 import com.etologic.fintonictestchallenge.domain.model.Hero;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -40,6 +42,8 @@ class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
         @BindView(R.id.ivItemHeroPhoto)
         ImageView ivItemHeroePhoto;
+        @BindView(R.id.pbItemHeroPhoto)
+        ProgressBar pbItemHeroPhoto;
         @BindView(R.id.tvItemHeroName)
         TextView tvItemHeroeName;
         @BindView(R.id.tvItemHeroRealName)
@@ -67,15 +71,25 @@ class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ItemHeroeViewHolder viewHolder = (ItemHeroeViewHolder) holder;
+        final ItemHeroeViewHolder viewHolder = (ItemHeroeViewHolder) holder;
+        viewHolder.pbItemHeroPhoto.setVisibility(View.VISIBLE);
         Hero hero = heroes.get(position);
         viewHolder.tvItemHeroeName.setText(hero.getName());
         viewHolder.tvItemHeroeRealName.setText(hero.getRealName());
         Picasso piccaso = PicassoCache.getPicassoInstance(viewHolder.tvItemHeroeName.getContext());
         piccaso.load(hero.getPhoto())
                 .error(R.drawable.error_icon)
-                .placeholder(R.mipmap.ic_launcher)
-                .into(viewHolder.ivItemHeroePhoto);
+                .noPlaceholder()
+                .into(viewHolder.ivItemHeroePhoto, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        viewHolder.pbItemHeroPhoto.setVisibility(View.GONE);
+                    }
+                    @Override
+                    public void onError() {
+                        viewHolder.pbItemHeroPhoto.setVisibility(View.GONE);
+                    }
+                });
     }
 
     @Override
