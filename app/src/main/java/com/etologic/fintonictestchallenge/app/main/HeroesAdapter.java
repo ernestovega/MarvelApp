@@ -67,7 +67,7 @@ class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_heroe, parent, false);
+                .inflate(R.layout.item_hero, parent, false);
         return new ItemHeroeViewHolder(itemView);
     }
 
@@ -81,7 +81,7 @@ class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         viewHolder.tvItemHeroeHeight.setText(hero.getHeight());
         Picasso piccaso = PicassoCache.getPicassoInstance(viewHolder.tvItemHeroeName.getContext());
         piccaso.load(hero.getPhoto())
-                .error(R.drawable.error_icon)
+                .error(R.drawable.busy_heroes)
                 .noPlaceholder()
                 .into(viewHolder.ivItemHeroePhoto, new Callback() {
                     @Override

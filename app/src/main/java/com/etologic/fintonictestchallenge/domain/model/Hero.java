@@ -83,6 +83,16 @@ public class Hero {
         this.groups = groups;
     }
 
+    public Hero() {
+        this.name = "";
+        this.photo = "";
+        this.realName = "";
+        this.height = "";
+        this.power = "";
+        this.abilities = "";
+        this.groups = "";
+    }
+
     public Hero(String name,
                 String photo,
                 String realName,

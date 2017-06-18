@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
 
 public final class MainActivity extends AppCompatActivity implements IMainView {
 
-    private static final String HERO_NAME_KEY = "hero_name";
+    public static final String HERO_NAME_KEY = "hero_name";
 
     //region Fields
 

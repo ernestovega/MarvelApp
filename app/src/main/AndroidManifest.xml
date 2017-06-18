@@ -17,7 +17,7 @@
         <activity
             android:name=".app.splash.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppThemeNoToolbar"
+            android:theme="@style/SplashTheme"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,7 +27,8 @@
 
         <activity android:name=".app.main.MainActivity"/>
 
-        <activity android:name=".app.hero_detail.HeroDetailActivity"/>
+        <activity android:name=".app.hero_detail.HeroDetailActivity"
+                  android:theme="@style/HeroDetailTheme"/>
 
     </application>
 

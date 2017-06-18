@@ -7,8 +7,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppThemeNoToolbar" parent="@style/AppTheme">
+    <style name="SplashTheme" parent="@style/AppTheme">
         <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="HeroDetailTheme" parent="@style/AppTheme">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>

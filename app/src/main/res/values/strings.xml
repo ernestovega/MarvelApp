@@ -4,4 +4,15 @@
     <string name="busy_heroes">Lo sentimos, todos nuestros héroes están ocupados salvando vidas.</string>
     <string name="retry">Reintentar</string>
     <string name="busy_heroes_image">Busy heroes image</string>
+    <string name="toolbar_image">Toolbar image</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet</string>
+    <string name="busy_hero">Lo sentimos, nuestro héroe esta ocupado salvando vidas.</string>
+    <string name="busy_hero1">Lo sentimos,</string>
+    <string name="busy_hero2">esta ocupado salvando vidas.</string>
+    <string name="return_">volver</string>
+    <string name="real_name">Real name</string>
+    <string name="powers">Powers</string>
+    <string name="abilities">Abilities</string>
+    <string name="groups">Groups</string>
+    <string name="height">Height</string>
 </resources>
