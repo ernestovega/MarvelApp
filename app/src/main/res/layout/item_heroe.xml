@@ -1,59 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:id="@+id/llItemHeroeContainer"
-              android:layout_width="match_parent"
-              android:layout_height="@dimen/itemHeroHeight"
-              android:gravity="start"
-              android:orientation="horizontal"
-              android:padding="@dimen/half_standard_margin">
-
-    <FrameLayout
-        android:layout_width="@dimen/itemHeroPhotoHeight"
-        android:layout_height="@dimen/itemHeroPhotoHeight">
-
-        <ImageView
-            android:id="@+id/ivItemHeroPhoto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/hero_picture"/>
-
-        <ProgressBar
-            android:id="@+id/pbItemHeroPhoto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="@dimen/half_standard_margin"/>
-    </FrameLayout>
-
+<android.support.v7.widget.CardView
+    android:id="@+id/cvItemHeroeContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemHeroHeight"
+    android:layout_margin="@dimen/half_standard_margin"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:padding="@dimen/half_standard_margin"
+    card_view:cardBackgroundColor="@color/colorAccent"
+    card_view:cardCornerRadius="@dimen/cardview_default_radius"
+    card_view:cardElevation="@dimen/cardview_elevation">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:gravity="start"
+        android:clickable="false"
+        android:orientation="horizontal"
+        android:padding="@dimen/half_standard_margin">
 
-        <TextView
-            android:id="@+id/tvItemHeroName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/standard_margin"
-            android:layout_marginStart="@dimen/standard_margin"
-            android:gravity="start|top"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            tools:text="Hero name"
-            android:textStyle="bold"
-            android:ellipsize="marquee"/>
+        <FrameLayout
+            android:layout_width="@dimen/itemHeroPhotoHeight"
+            android:layout_height="@dimen/itemHeroPhotoHeight">
 
-        <TextView
-            android:id="@+id/tvItemHeroRealName"
+            <ImageView
+                android:id="@+id/ivItemHeroPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/hero_picture"/>
+
+            <ProgressBar
+                android:id="@+id/pbItemHeroPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/half_standard_margin"/>
+
+        </FrameLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/standard_margin"
-            android:layout_marginStart="@dimen/standard_margin"
-            android:gravity="center_vertical|start"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            tools:text="Hero real name"
-            android:ellipsize="marquee"/>
+            android:layout_height="match_parent"
+            android:gravity="start|center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvItemHeroName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:ellipsize="marquee"
+                android:gravity="start|top"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                tools:text="Hero name"/>
+
+            <TextView
+                android:id="@+id/tvItemHeroRealName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/half_standard_margin"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|start"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/secondary_text_light"
+                tools:text="Hero real name"/>
+
+            <TextView
+                android:id="@+id/tvItemHeroHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/standard_margin"
+                android:layout_marginStart="@dimen/standard_margin"
+                android:layout_marginTop="@dimen/half_standard_margin"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical|start"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/secondary_text_light"
+                tools:text="Hero real name"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-
-</LinearLayout>
+</android.support.v7.widget.CardView>

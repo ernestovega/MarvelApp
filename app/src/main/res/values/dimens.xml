@@ -4,8 +4,10 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="itemHeroHeight">80dp</dimen>
-    <dimen name="itemHeroPhotoHeight">64dp</dimen>
+    <dimen name="itemHeroHeight">120dp</dimen>
+    <dimen name="itemHeroPhotoHeight">104dp</dimen>
     <dimen name="standard_margin">16dp</dimen>
     <dimen name="half_standard_margin">8dp</dimen>
+    <dimen name="double_standard_margin">32dp</dimen>
+    <dimen name="cardview_elevation">4dp</dimen>
 </resources>

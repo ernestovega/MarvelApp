@@ -48,13 +48,15 @@ class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         TextView tvItemHeroeName;
         @BindView(R.id.tvItemHeroRealName)
         TextView tvItemHeroeRealName;
+        @BindView(R.id.tvItemHeroHeight)
+        TextView tvItemHeroeHeight;
 
         ItemHeroeViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
         }
 
-        @OnClick(R.id.llItemHeroeContainer)
+        @OnClick(R.id.cvItemHeroeContainer)
         void onClick() {
             if(itemHeroeListener != null) {
                 itemHeroeListener.onItemHeroClick(tvItemHeroeName.getText().toString());
@@ -76,6 +78,7 @@ class HeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         Hero hero = heroes.get(position);
         viewHolder.tvItemHeroeName.setText(hero.getName());
         viewHolder.tvItemHeroeRealName.setText(hero.getRealName());
+        viewHolder.tvItemHeroeHeight.setText(hero.getHeight());
         Picasso piccaso = PicassoCache.getPicassoInstance(viewHolder.tvItemHeroeName.getContext());
         piccaso.load(hero.getPhoto())
                 .error(R.drawable.error_icon)

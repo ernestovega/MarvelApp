@@ -5,35 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".app.main.MainActivity">
+    tools:context=".app.main.MainActivity"
+    android:background="@color/colorAccentDark">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_heroe"/>
+        tools:listitem="@layout/item_heroe"
+        tools:visibility="gone"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:id="@+id/llBusyHeroes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvBusyHeroes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/no_hay_heroes"
-            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="@dimen/itemHeroHeight"
+            android:layout_height="@dimen/itemHeroHeight"
+            android:src="@drawable/busy_heroes"
+            android:contentDescription="@string/busy_heroes_image"/>
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"/>
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/pbMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        tools:indeterminateTint="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/double_standard_margin"/>
 
 </android.support.design.widget.CoordinatorLayout>

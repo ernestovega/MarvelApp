@@ -3,6 +3,12 @@ package com.etologic.fintonictestchallenge.app.splash;
 import android.support.annotation.UiThread;
 
 @UiThread
-public interface ISplashView {
+interface ISplashView {
 
+    void goToMain();
+
+    void showErrorSnackbar();
+
+    void showProgressBar();
+    void hideProgressBar();
 }
