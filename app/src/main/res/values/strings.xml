@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FintonicTestChallenge</string>
+    <string name="collapsible_toolbar_image">Collapsible toolbar image</string>
+    <string name="hero_picture">Hero photo</string>
+    <string name="download_heroes_error">Ups! Hubo algún problema al descargar los héroes.</string>
+    <string name="load_heroes_error">Ups! Hubo algún problema al cargar los héroes.</string>
+    <string name="get_heroes_error">Ups! Hubo algún problema al obtener los héroes.</string>
+    <string name="no_hay_heroes">Disculpa, todos los héroes\nestán ocupados salvando vidas.</string>
+</resources>

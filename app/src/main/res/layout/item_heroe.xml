@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/itemHeroHeight"
+              android:gravity="start"
+              android:orientation="horizontal"
+              android:padding="@dimen/half_standard_margin">
+
+    <FrameLayout
+        android:layout_width="@dimen/itemHeroPhotoHeight"
+        android:layout_height="@dimen/itemHeroPhotoHeight">
+
+        <ImageView
+            android:id="@+id/ivItemHeroPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/hero_picture"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/pbItemHeroPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:indeterminateTint="@color/colorPrimary"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvItemHeroName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:gravity="start|top"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Hero name"
+            android:textStyle="bold"
+            android:ellipsize="marquee"/>
+
+        <TextView
+            android:id="@+id/tvItemHeroRealName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/standard_margin"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:gravity="center_vertical|start"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            tools:text="Hero real name"
+            android:ellipsize="marquee"/>
+    </LinearLayout>
+
+
+</LinearLayout>
